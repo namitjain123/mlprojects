@@ -1,138 +1,136 @@
 # 🎓 Student Exam Performance Indicator
 
-A machine learning-based web application that predicts a student's **maths score** based on demographic and academic inputs.
-
-This project is designed as an end-to-end ML pipeline, combining data preprocessing, model training, and deployment using Flask.
+A machine learning-based web application that predicts a student's **maths score** based on academic and demographic inputs.
 
 ---
 
-## 📌 Project Summary
+## 📌 Project Overview
 
-Understanding student performance is important for improving educational outcomes.  
-This project builds a predictive system that estimates a student's maths score using features such as:
+This project builds an end-to-end machine learning pipeline to predict student performance using:
 
 - Gender  
 - Ethnicity  
 - Parental education level  
 - Lunch type  
-- Test preparation status  
-- Reading and writing scores  
+- Test preparation course  
+- Reading score  
+- Writing score  
 
-The trained model is deployed through a **Flask web interface**, allowing users to input data and get real-time predictions.
+The trained model is deployed using a Flask web application for real-time predictions.
 
----
-
-## ❗ Problem Statement
-
-Educational institutions often lack tools to:
-
-- Predict student academic performance early  
-- Identify key factors influencing scores  
-- Support data-driven decision-making  
-
-Manual analysis is time-consuming and inconsistent.  
-This project solves that by providing a **quick and automated prediction system**.
 
 ---
 
-## 💡 Solution Overview
+## 🖼️ Application Screenshots
 
-This project implements a complete machine learning pipeline:
+### Home Page
+![Home Page](assets/home.png)
 
-- Data preprocessing and transformation  
-- Model training using regression techniques  
-- Pipeline creation for reproducibility  
-- Flask-based web deployment  
-
-The system takes user input via a form and returns a predicted maths score instantly.
+### Prediction Page
+![Prediction Page](assets/predict.png)
 
 ---
 
 ## ⚙️ How It Works
 
-### 1. Data Analysis & Preprocessing
-- Performed EDA using Pandas, Matplotlib, and Seaborn  
-- Handled categorical and numerical features  
-- Applied encoding and scaling using pipelines  
+### Data Processing
+- Data cleaning and preprocessing  
+- Encoding categorical variables  
+- Feature scaling  
+
+### Model Training
+The following regression models were trained and compared:
+
+- Random Forest Regressor  
+- Decision Tree Regressor  
+- Gradient Boosting Regressor  
+- Linear Regression  
+- XGBoost Regressor  
+- CatBoost Regressor  
+- AdaBoost Regressor  
+
+### Final Model
+- Best model selected based on performance  
+- Saved as `model.pkl`  
+- Preprocessing saved as `preprocessor.pkl`  
 
 ---
 
-### 2. Model Training
-- Trained regression models using Scikit-learn  
-- Selected best-performing model based on accuracy  
-- Saved trained model and preprocessor as `.pkl` files  
+## 🧠 Prediction Pipeline
 
----
-
-### 3. Prediction Pipeline
-- Built a custom pipeline (`PredictPipeline`)  
-- Loads:
-  - `model.pkl`
-  - `preprocessor.pkl`
-- Converts user input into model-ready format  
-
----
-
-### 4. Web Application (Flask)
-- `/` → Landing page  
-- `/predictdata` → Input form  
-- Accepts user data and returns prediction  
-
----
-
-## 🖥️ Application Preview
-
-### 🔹 Home Page
-- Introduction to the system  
-- Navigation to prediction page  
-
-### 🔹 Prediction Page
-- User-friendly form  
-- Displays predicted maths score  
+- Accepts user input from UI  
+- Converts input into dataframe  
+- Applies preprocessing  
+- Generates prediction using trained model  
 
 ---
 
 ## 🚀 How to Run the Project
 
 ### 1. Clone Repository
-```bash
-git clone <your-repo-link>
-cd mlprojects
-2. Create Virtual Environment
-python -m venv venv
-.\venv\Scripts\activate
-3. Install Dependencies
-pip install -r requirements.txt
-4. Run Application
-python app.py
-5. Open in Browser
-http://localhost:8080
+git clone https://github.com/namitjain123/mlprojects.git  
+cd mlprojects  
 
 ---
-📊 Model Performance
-Model Type: Regression Model
-Training Accuracy: High (based on dataset)
-Evaluation done using standard regression metrics
-🛠️ Tech Stack
-Python
-Pandas, NumPy
-Scikit-learn
-Flask
-HTML, CSS
-🎯 Intended Users
 
-This project is suitable for:
+### 2. Create Virtual Environment
+python -m venv venv  
+.\venv\Scripts\activate  
 
-Students learning ML deployment
-Data science beginners
-Academic demonstration projects
-📌 Future Improvements
-Add more advanced models (XGBoost, CatBoost tuning)
-Improve UI with better visualization
-Deploy on cloud (Azure / AWS)
-Add user authentication
-👨‍💻 Author
-
-Namit Jain
-Master of Data Science – Deakin University
 ---
+
+### 3. Install Dependencies
+pip install -r requirements.txt  
+
+---
+
+### 4. Run Application
+python app.py  
+
+---
+
+### 5. Open in Browser
+http://localhost:8080  
+
+---
+
+## 🛠️ Tech Stack
+
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- XGBoost, CatBoost  
+- Flask  
+- HTML, CSS  
+
+---
+
+## 🎯 Features
+
+- Clean UI interface  
+- Real-time prediction  
+- End-to-end ML pipeline  
+- Multiple model comparison  
+
+---
+
+## 📌 Future Improvements
+
+- Improve model accuracy with tuning  
+- Add charts and visualization  
+- Deploy with CI/CD  
+- Add authentication  
+
+---
+
+## 👨‍💻 Author
+
+**Namit Jain**  
+Master of Data Science – Deakin University  
+
+---
+
+## ⭐ Notes
+
+- This is an educational project  
+- Designed for learning ML + deployment  
